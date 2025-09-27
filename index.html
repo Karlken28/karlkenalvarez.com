@@ -7,10 +7,13 @@
     <title>Karlken Alvarez – Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
+    <div class="lang-switch">
+        <button data-lang="en" class="active">EN</button> |
+        <button data-lang="it">IT</button>
+    </div>
 
     <!-- ===== HERO ===== -->
     <section class="hero">
@@ -28,9 +31,13 @@
 
                 <div class="profile-text">
                     <p class="prompt">$ whoami</p>
-                    <h1>Karlken Alvarez</h1>
-                    <p class="subtitle">
+                    <h1 class="lang-en">Karlken Alvarez</h1>
+                    <h1 class="lang-it">Karlken Alvarez</h1>
+                    <p class="subtitle lang-en">
                         Former Java Full-Stack Developer &amp; IT Project Manager · Now DevOps &amp; IT Manager
+                    </p>
+                    <p class="subtitle lang-it">
+                        Ex Java Full-Stack Developer &amp; IT Project Manager · Ora DevOps &amp; IT Manager
                     </p>
 
                     <p class="prompt">$ skills</p>
@@ -40,7 +47,8 @@
                         <span>Linux</span>
                         <span>Bash</span>
                         <span>Java</span>
-                        <span class="more">…and more</span>
+                        <span class="more lang-en">…and more</span>
+                        <span class="more lang-it">…e altro</span>
                     </div>
                 </div>
             </div>
@@ -49,18 +57,29 @@
 
     <!-- ===== SYSTEM ARCHITECTURE & PROJECTS ===== -->
     <section class="projects">
-        <h2>System Architecture &amp; Projects</h2>
+        <h2 class="lang-en">System Architecture &amp; Projects</h2>
+        <h2 class="lang-it">Architettura di Sistema &amp; Progetti</h2>
 
         <div class="project-card">
-            <h3>Cloud &amp; DevOps Infrastructure</h3>
-            <p>
+            <h3 class="lang-en">Cloud &amp; DevOps Infrastructure</h3>
+            <h3 class="lang-it">Infrastruttura Cloud &amp; DevOps</h3>
+            <p class="lang-en">
                 Built and manage scalable Docker Swarm/Kubernetes environments for production, test and dev,
                 with automated backups, CI/CD pipelines, and 99.99% uptime targets.
             </p>
-            <ul>
+            <p class="lang-it">
+                Ho creato e gestisco ambienti Docker Swarm/Kubernetes scalabili per produzione, test e sviluppo,
+                con backup automatizzati, pipeline CI/CD e obiettivi di uptime al 99,99%.
+            </p>
+            <ul class="lang-en">
                 <li>Containerized microservices and automated deployments</li>
                 <li>Designed secure networks and VPNs with FortiGate firewalls</li>
                 <li>Optimized resources and cost across multi-cloud setups (AWS &amp; more)</li>
+            </ul>
+            <ul class="lang-it">
+                <li>Containerizzazione dei microservizi e deployment automatizzati</li>
+                <li>Progettazione di reti sicure e VPN con firewall FortiGate</li>
+                <li>Ottimizzazione di risorse e costi su ambienti multi-cloud (AWS &amp; altro)</li>
             </ul>
             <div class="tech-tags">
                 <span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>AWS</span><span>Linux</span>
@@ -68,32 +87,51 @@
         </div>
 
         <div class="project-card">
-            <h3>System Administration &amp; IT Management</h3>
-            <p>
+            <h3 class="lang-en">System Administration &amp; IT Management</h3>
+            <h3 class="lang-it">Amministrazione di Sistema &amp; IT Management</h3>
+            <p class="lang-en">
                 Oversee and secure enterprise infrastructure: servers, racks, switches,
                 domains and certificates, ensuring reliability and smooth daily operations.
             </p>
-            <ul>
+            <p class="lang-it">
+                Gestisco e metto in sicurezza l’infrastruttura aziendale: server, rack, switch,
+                domini e certificati, garantendo affidabilità e operatività quotidiana.
+            </p>
+            <ul class="lang-en">
                 <li>FortiGate VPN and SSL/TLS management</li>
                 <li>Custom backup &amp; monitoring solutions (Veeam, Nakivo, QNAP for Microsoft 365 & VMs)</li>
                 <li>Tailored IT support and automation for clients</li>
+            </ul>
+            <ul class="lang-it">
+                <li>VPN FortiGate e gestione avanzata di SSL/TLS</li>
+                <li>Soluzioni personalizzate di backup e monitoraggio (Veeam, Nakivo, QNAP per Microsoft 365 e VM)</li>
+                <li>Supporto IT su misura e automazione per i clienti</li>
             </ul>
             <div class="tech-tags">
                 <span>Networking</span><span>FortiGate</span><span>Automation</span>
                 <span>Monitoring</span><span>Backup</span>
             </div>
         </div>
-
         <div class="project-card">
-            <h3>Full-Stack Development Background</h3>
-            <p>
+            <h3 class="lang-en">Full-Stack Development Background</h3>
+            <h3 class="lang-it">Background da Full-Stack Developer</h3>
+            <p class="lang-en">
                 Former Java full-stack developer with years of experience in enterprise
                 web apps and CRM integrations, now applying those skills to DevOps and automation.
             </p>
-            <ul>
+            <p class="lang-it">
+                Ex sviluppatore Java full-stack con anni di esperienza in applicazioni web enterprise
+                e integrazioni CRM, ora applico queste competenze al DevOps e all’automazione.
+            </p>
+            <ul class="lang-en">
                 <li>Java / Spring Boot &amp; REST API design</li>
                 <li>Front-end with HTML, JS, JSP</li>
                 <li>CRM integrations with Salesforce and PostgreSQL</li>
+            </ul>
+            <ul class="lang-it">
+                <li>Java / Spring Boot &amp; progettazione REST API</li>
+                <li>Front-end con HTML, JS, JSP</li>
+                <li>Integrazioni CRM con Salesforce e PostgreSQL</li>
             </ul>
             <div class="tech-tags">
                 <span>Java</span><span>Spring</span><span>Salesforce</span><span>PostgreSQL</span>
@@ -101,11 +139,14 @@
         </div>
 
         <!-- HOBBIES & SIDE PROJECTS -->
-        <h2 style="margin-top: 8vh;">Hobbies &amp; Side Projects</h2>
+        <h2 style="margin-top: 8vh;" class="lang-en">Hobbies &amp; Side Projects</h2>
+        <h2 style="margin-top: 8vh;" class="lang-it">Hobby &amp; Progetti Personali</h2>
+
         <div class="hobbies-card" style="margin-bottom: 5vh;">
             <div class="hobby-item">
-                <h4>Homelab &amp; Smart Home Automation</h4>
-                <p>
+                <h4 class="lang-en">Homelab &amp; Smart Home Automation</h4>
+                <h4 class="lang-it">Homelab &amp; Automazione Smart Home</h4>
+                <p class="lang-en">
                     In my free time I love building and experimenting with my own
                     <span class="highlight">homelab</span>.
                     I’ve fully automated my house using <span class="highlight">Home Assistant</span>,
@@ -115,22 +156,37 @@
                     <span class="highlight">lights & switches</span>,
                     and seamless <span class="highlight">HomeKit</span> control.
                 </p>
-                <p class="hobby-note"><em>It’s my playground for new tech and continuous learning.</em></p>
+                <p class="lang-it">
+                    Nel tempo libero amo costruire e sperimentare con il mio
+                    <span class="highlight">homelab</span>.
+                    Ho completamente automatizzato la mia casa usando <span class="highlight">Home Assistant</span>,
+                    in esecuzione su <span class="highlight">Raspberry Pi</span>, integrando
+                    <span class="highlight">sensori di presenza</span>,
+                    <span class="highlight">rilevamento tramite telecamere</span>,
+                    <span class="highlight">luci e interruttori</span>,
+                    e un controllo <span class="highlight">HomeKit</span> senza interruzioni.
+                </p>
+                <p class="hobby-note lang-en"><em>It’s my playground for new tech and continuous learning.</em></p>
+                <p class="hobby-note lang-it"><em>È il mio laboratorio per nuove tecnologie e apprendimento
+                        continuo.</em></p>
             </div>
         </div>
     </section>
 
     <!-- ===== IMPACT & ACHIEVEMENTS ===== -->
     <section class="impact">
-        <h2>Impact &amp; Achievements</h2>
+        <h2 class="lang-en">Impact &amp; Achievements</h2>
+        <h2 class="lang-it">Impatto &amp; Risultati</h2>
 
         <!-- ===== Full-Stack Development & Project Management ===== -->
         <div class="impact-category">
-            <h3>Full-Stack Development & Project Management</h3>
+            <h3 class="lang-en">Full-Stack Development & Project Management</h3>
+            <h3 class="lang-it">Sviluppo Full-Stack & Project Management</h3>
             <div class="impact-grid">
                 <div class="impact-card">
-                    <h4>Enterprise Web Applications</h4>
-                    <ul>
+                    <h4 class="lang-en">Enterprise Web Applications</h4>
+                    <h4 class="lang-it">Applicazioni Web Enterprise</h4>
+                    <ul class="lang-en">
                         <li>Designed and coded internal web applications from scratch using <span
                                 class="highlight">Java</span>, <span class="highlight">Spring</span> and <span
                                 class="highlight">Salesforce</span></li>
@@ -138,10 +194,20 @@
                                 class="highlight">PostgreSQL/MySQL</span> data flows</li>
                         <li>Delivered maintainable, scalable solutions supporting core business processes</li>
                     </ul>
+                    <ul class="lang-it">
+                        <li>Progettazione e sviluppo da zero di applicazioni interne utilizzando <span
+                                class="highlight">Java</span>, <span class="highlight">Spring</span> e <span
+                                class="highlight">Salesforce</span></li>
+                        <li>Integrazione di <span class="highlight">REST API</span> e ottimizzazione dei flussi dati
+                            <span class="highlight">PostgreSQL/MySQL</span>
+                        </li>
+                        <li>Consegna di soluzioni scalabili e facilmente manutenibili per i processi core aziendali</li>
+                    </ul>
                 </div>
                 <div class="impact-card">
-                    <h4>Team Leadership</h4>
-                    <ul>
+                    <h4 class="lang-en">Team Leadership</h4>
+                    <h4 class="lang-it">Leadership di Team</h4>
+                    <ul class="lang-en">
                         <li>Led and mentored a <span class="highlight">10-developer</span> team across front-end,
                             back-end and QA</li>
                         <li>Coordinated <span class="highlight">sprint planning</span>, roadmap definition and technical
@@ -149,17 +215,27 @@
                         <li>Ensured timely delivery of complex <span class="highlight">multi-service features</span>
                         </li>
                     </ul>
+                    <ul class="lang-it">
+                        <li>Gestione e mentoring di un team di <span class="highlight">10 sviluppatori</span> tra
+                            front-end,
+                            back-end e QA</li>
+                        <li>Coordinamento di <span class="highlight">pianificazione sprint</span>, definizione roadmap e
+                            documentazione tecnica</li>
+                        <li>Garantita la consegna puntuale di <span class="highlight">funzionalità multi-servizio
+                                complesse</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
         <!-- ===== DevOps & Infrastructure Modernization ===== -->
         <div class="impact-category">
-            <h3>DevOps & Infrastructure Modernization</h3>
+            <h3 class="lang-en">DevOps & Infrastructure Modernization</h3>
+            <h3 class="lang-it">DevOps & Modernizzazione Infrastruttura</h3>
             <div class="impact-grid">
                 <div class="impact-card">
-                    <h4>Containerization & Reliability</h4>
-                    <ul>
+                    <h4 class="lang-en">Containerization & Reliability</h4>
+                    <h4 class="lang-it">Containerizzazione & Affidabilità</h4>
+                    <ul class="lang-en">
                         <li>Migrated legacy <span class="highlight">Tomcat</span> deployments into <span
                                 class="highlight">Docker</span> containers with isolated environments</li>
                         <li>Introduced logging and access monitoring stacks for better <span
@@ -167,15 +243,36 @@
                         <li>Implemented <span class="highlight">fail-safe</span> and <span
                                 class="highlight">high-availability</span> strategies to ensure business continuity</li>
                     </ul>
+                    <ul class="lang-it">
+                        <li>Migrazione di deployment legacy <span class="highlight">Tomcat</span> in container
+                            <span class="highlight">Docker</span> isolati
+                        </li>
+                        <li>Introduzione di stack di logging e monitoraggio accessi per una migliore
+                            <span class="highlight">osservabilità</span>
+                        </li>
+                        <li>Implementazione di strategie <span class="highlight">fail-safe</span> e
+                            <span class="highlight">high-availability</span> per garantire la continuità operativa
+                        </li>
+                    </ul>
                 </div>
                 <div class="impact-card">
-                    <h4>Systems Redesign & Optimization</h4>
-                    <ul>
+                    <h4 class="lang-en">Systems Redesign & Optimization</h4>
+                    <h4 class="lang-it">Redesign & Ottimizzazione dei Sistemi</h4>
+                    <ul class="lang-en">
                         <li>Redesigned infrastructure to remove obsolete resources and scale critical services</li>
                         <li>Created dedicated <span class="highlight">production</span>, <span
                                 class="highlight">test</span> and <span class="highlight">development</span>
                             environments</li>
                         <li>Achieved significant cost savings and performance gains through resource optimization</li>
+                    </ul>
+                    <ul class="lang-it">
+                        <li>Riprogettazione dell’infrastruttura per eliminare risorse obsolete e scalare i servizi
+                            critici</li>
+                        <li>Creazione di ambienti dedicati a <span class="highlight">produzione</span>,
+                            <span class="highlight">test</span> e <span class="highlight">sviluppo</span>
+                        </li>
+                        <li>Significativi risparmi e miglioramenti prestazionali grazie all’ottimizzazione delle risorse
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -183,11 +280,13 @@
 
         <!-- ===== Security, Networking & Backups ===== -->
         <div class="impact-category">
-            <h3>Security, Networking & Backups</h3>
+            <h3 class="lang-en">Security, Networking & Backups</h3>
+            <h3 class="lang-it">Sicurezza, Networking & Backup</h3>
             <div class="impact-grid">
                 <div class="impact-card">
-                    <h4>Secure Networking</h4>
-                    <ul>
+                    <h4 class="lang-en">Secure Networking</h4>
+                    <h4 class="lang-it">Reti Sicure</h4>
+                    <ul class="lang-en">
                         <li>Deployed and configured <span class="highlight">FortiGate firewalls</span>, <span
                                 class="highlight">VPNs</span> and advanced <span class="highlight">SSL/TLS</span>
                             management</li>
@@ -195,20 +294,39 @@
                         <li>Established <span class="highlight">monitoring</span> and alerting for proactive incident
                             response</li>
                     </ul>
+                    <ul class="lang-it">
+                        <li>Implementazione e configurazione di <span class="highlight">firewall FortiGate</span>,
+                            <span class="highlight">VPN</span> e gestione avanzata di <span
+                                class="highlight">SSL/TLS</span>
+                        </li>
+                        <li>Rinforzo del perimetro di rete e comunicazione sicura tra servizi</li>
+                        <li>Monitoraggio e alerting proattivo per una risposta rapida agli incidenti</li>
+                    </ul>
                 </div>
                 <div class="impact-card">
-                    <h4>Backup & Disaster Recovery</h4>
-                    <ul>
+                    <h4 class="lang-en">Backup & Disaster Recovery</h4>
+                    <h4 class="lang-it">Backup & Disaster Recovery</h4>
+                    <ul class="lang-en">
                         <li>Implemented multi-layer backup strategies using <span class="highlight">Veeam</span>, <span
                                 class="highlight">Nakivo</span> and <span class="highlight">QNAP</span></li>
                         <li>Protected <span class="highlight">Microsoft 365</span> data and <span
                                 class="highlight">virtual machines</span> with automated retention policies</li>
                         <li>Validated restoration procedures to guarantee rapid recovery in case of failure</li>
                     </ul>
+                    <ul class="lang-it">
+                        <li>Strategie di backup multilivello con <span class="highlight">Veeam</span>,
+                            <span class="highlight">Nakivo</span> e <span class="highlight">QNAP</span>
+                        </li>
+                        <li>Protezione dei dati <span class="highlight">Microsoft 365</span> e delle
+                            <span class="highlight">macchine virtuali</span> con policy di retention automatiche
+                        </li>
+                        <li>Procedure di ripristino testate per garantire un recovery rapido in caso di guasto</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- ===== CONTACT ===== -->
     <section class="contact">
         <div class="window">
@@ -219,11 +337,15 @@
             </div>
 
             <p class="prompt">$ contact --info</p>
-            <h2>Let's Connect</h2>
+            <h2 class="lang-en">Let's Connect</h2>
+            <h2 class="lang-it">Contattami</h2>
 
             <p class="prompt">$ location --current</p>
-            <div class="info-box">
+            <div class="info-box lang-en">
                 <i class="fa-solid fa-location-dot"></i> Milan, Italy
+            </div>
+            <div class="info-box lang-it">
+                <i class="fa-solid fa-location-dot"></i> Milano, Italia
             </div>
 
             <p class="prompt">$ contact --email</p>
@@ -233,8 +355,11 @@
 
             <!-- Download Resume -->
             <p class="prompt">$ cat resume.pdf</p>
-            <a href="assets/files/Karlken-Alvarez-Resume.pdf" class="info-box" download>
+            <a href="assets/files/EN_KarlkenAlvarez.pdf" class="info-box lang-en" download>
                 <i class="fa-regular fa-file"></i> Download Resume
+            </a>
+            <a href="assets/files/IT_KarlkenAlvarez.pdf" class="info-box lang-it" download>
+                <i class="fa-regular fa-file"></i> Scarica CV
             </a>
 
             <!-- Social Links -->
@@ -259,21 +384,26 @@
             <p class="prompt">$ send-message</p>
             <form id="contact-form" class="contact-form">
                 <label>
-                    name:
+                    <span class="lang-en">name:</span>
+                    <span class="lang-it">nome:</span>
                     <input type="text" name="name" required>
                 </label>
                 <label>
-                    email:
+                    <span class="lang-en">email:</span>
+                    <span class="lang-it">email:</span>
                     <input type="email" name="email" required>
                 </label>
                 <label>
-                    message:
+                    <span class="lang-en">message:</span>
+                    <span class="lang-it">messaggio:</span>
                     <textarea name="message" rows="4" required></textarea>
                 </label>
-                <button type="submit">SendMessage()</button>
+                <button type="submit" class="lang-en">SendMessage()</button>
+                <button type="submit" class="lang-it">InviaMessaggio()</button>
             </form>
         </div>
     </section>
+
     <div id="form-popup" class="form-popup">
         <div class="window">
             <div class="dots">
@@ -281,48 +411,85 @@
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
             </div>
-            <h3>Thank you!</h3>
-            <p>Your message has been sent successfully.<br>
-                I’ll get back to you as soon as possible.</p>
+            <h3 class="lang-en">Thank you!</h3>
+            <h3 class="lang-it">Grazie!</h3>
+            <p class="lang-en">Your message has been sent successfully.<br>I’ll get back to you as soon as possible.</p>
+            <p class="lang-it">Il tuo messaggio è stato inviato con successo.<br>Ti risponderò il prima possibile.</p>
             <button class="close-popup">OK</button>
         </div>
     </div>
-
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <script>
         document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const data = {
                 name: e.target.name.value,
                 email: e.target.email.value,
                 message: e.target.message.value
             };
-
             try {
                 const res = await fetch('https://7ze8wc3x9g.execute-api.eu-central-1.amazonaws.com/default/sendContactEmail', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
-
                 if (res.ok) {
-                    // ✅ show the popup
                     document.getElementById('form-popup').classList.add('show');
                     e.target.reset();
                 } else {
-                    alert("❌ Error sending message.");
+                    alert("❌ Error / Errore nell'invio del messaggio.");
                 }
             } catch (err) {
-                alert("❌ Network error.");
+                alert("❌ Network error / Errore di rete.");
             }
         });
 
-        // close popup on click
         document.querySelector('.close-popup').addEventListener('click', () => {
             document.getElementById('form-popup').classList.remove('show');
         });
-    </script>
 
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-switch button').forEach(b => b.classList.remove('active'));
+            document.querySelector(`.lang-switch button[data-lang="${lang}"]`).classList.add('active');
+
+            document.querySelectorAll('[class*="lang-"]').forEach(el => {
+                if (el.classList.contains(`lang-${lang}`)) {
+                    el.style.display = '';
+                } else if (el.classList.contains('lang-en') || el.classList.contains('lang-it')) {
+                    el.style.display = 'none';
+                }
+            });
+        }
+
+        // inizializzazione: forza la lingua EN al caricamento
+        switchLanguage('en');
+
+        document.querySelectorAll('.lang-switch button').forEach(btn => {
+            btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+        });
+        // ===== Scroll to Top Button =====
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        // mostra il pulsante quando scrolli giù di 200px
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        // quando clicchi, scrolla in alto
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>

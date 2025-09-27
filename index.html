@@ -101,23 +101,23 @@
         </div>
 
         <!-- HOBBIES & SIDE PROJECTS -->
-  <h2 style="margin-top: 8vh;">Hobbies &amp; Side Projects</h2>
-<div class="hobbies-card" style="margin-bottom: 5vh;">
-  <div class="hobby-item">
-    <h4>Homelab &amp; Smart Home Automation</h4>
-    <p>
-      In my free time I love building and experimenting with my own
-      <span class="highlight">homelab</span>.
-      I’ve fully automated my house using <span class="highlight">Home Assistant</span>,
-      running on <span class="highlight">Raspberry Pi</span>, integrating
-      <span class="highlight">presence sensors</span>, 
-      <span class="highlight">camera detection</span>, 
-      <span class="highlight">lights & switches</span>, 
-      and seamless <span class="highlight">HomeKit</span> control.
-    </p>
-    <p class="hobby-note"><em>It’s my playground for new tech and continuous learning.</em></p>
-  </div>
-</div>
+        <h2 style="margin-top: 8vh;">Hobbies &amp; Side Projects</h2>
+        <div class="hobbies-card" style="margin-bottom: 5vh;">
+            <div class="hobby-item">
+                <h4>Homelab &amp; Smart Home Automation</h4>
+                <p>
+                    In my free time I love building and experimenting with my own
+                    <span class="highlight">homelab</span>.
+                    I’ve fully automated my house using <span class="highlight">Home Assistant</span>,
+                    running on <span class="highlight">Raspberry Pi</span>, integrating
+                    <span class="highlight">presence sensors</span>,
+                    <span class="highlight">camera detection</span>,
+                    <span class="highlight">lights & switches</span>,
+                    and seamless <span class="highlight">HomeKit</span> control.
+                </p>
+                <p class="hobby-note"><em>It’s my playground for new tech and continuous learning.</em></p>
+            </div>
+        </div>
     </section>
 
     <!-- ===== IMPACT & ACHIEVEMENTS ===== -->
@@ -257,71 +257,71 @@
             </div>
 
             <p class="prompt">$ send-message</p>
-<form id="contact-form" class="contact-form">
-  <label>
-    name:
-    <input type="text" name="name" required>
-  </label>
-  <label>
-    email:
-    <input type="email" name="email" required>
-  </label>
-  <label>
-    message:
-    <textarea name="message" rows="4" required></textarea>
-  </label>
-  <button type="submit">SendMessage()</button>
-</form>
+            <form id="contact-form" class="contact-form">
+                <label>
+                    name:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    message:
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+                <button type="submit">SendMessage()</button>
+            </form>
         </div>
     </section>
     <div id="form-popup" class="form-popup">
-  <div class="window">
-    <div class="dots">
-      <span class="dot red"></span>
-      <span class="dot yellow"></span>
-      <span class="dot green"></span>
+        <div class="window">
+            <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <h3>Thank you!</h3>
+            <p>Your message has been sent successfully.<br>
+                I’ll get back to you as soon as possible.</p>
+            <button class="close-popup">OK</button>
+        </div>
     </div>
-    <h3>Thank you!</h3>
-    <p>Your message has been sent successfully.<br>
-       I’ll get back to you as soon as possible.</p>
-    <button class="close-popup">OK</button>
-  </div>
-</div>
 
-<script>
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-  const data = {
-    name: e.target.name.value,
-    email: e.target.email.value,
-    message: e.target.message.value
-  };
+            const data = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                message: e.target.message.value
+            };
 
-  try {
-    const res = await fetch('https://7ze8wc3x9g.execute-api.eu-central-1.amazonaws.com/default/sendContactEmail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
+            try {
+                const res = await fetch('https://7ze8wc3x9g.execute-api.eu-central-1.amazonaws.com/default/sendContactEmail', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
 
-    if (res.ok) {
-      // ✅ show the popup
-      document.getElementById('form-popup').classList.add('show');
-      e.target.reset();
-    } else {
-      alert("❌ Error sending message.");
-    }
-  } catch (err) {
-    alert("❌ Network error.");
-  }
-});
+                if (res.ok) {
+                    // ✅ show the popup
+                    document.getElementById('form-popup').classList.add('show');
+                    e.target.reset();
+                } else {
+                    alert("❌ Error sending message.");
+                }
+            } catch (err) {
+                alert("❌ Network error.");
+            }
+        });
 
-// close popup on click
-document.querySelector('.close-popup').addEventListener('click', () => {
-  document.getElementById('form-popup').classList.remove('show');
-});
-</script>
+        // close popup on click
+        document.querySelector('.close-popup').addEventListener('click', () => {
+            document.getElementById('form-popup').classList.remove('show');
+        });
+    </script>
 
 </body>
 
